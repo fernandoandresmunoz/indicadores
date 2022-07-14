@@ -1,0 +1,14 @@
+<mat-toolbar>
+    <a [routerLink]="['']">← Indicadores</a>
+    <h2  style='margin: 0 auto'>
+        {{ id | titlecase }}
+    </h2>
+</mat-toolbar>
+
+<mat-progress-bar *ngIf='loading' mode="indeterminate"></mat-progress-bar>
+<mat-list>
+    <mat-list-item *ngFor='let i of items?.reverse()'>
+        <span style='margin-right: 10em;'>{{ i.Fecha }}</span> $ {{ i.Valor }}
+    </mat-list-item>
+    
+</mat-list>

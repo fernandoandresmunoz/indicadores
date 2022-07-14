@@ -1,0 +1,39 @@
+<mat-toolbar>
+    <a [routerLink]="['']">← Indicadores</a>
+    <h2 style='margin: 0 auto'>
+        {{ id | titlecase }}
+    </h2>
+</mat-toolbar>
+<mat-progress-bar *ngIf='loading' mode="indeterminate"></mat-progress-bar>
+<div style='width: 500px; margin: 0 auto'>
+    
+    <h1 style='text-align: center;' *ngIf='!loading'>
+         {{ items !== undefined && items[items.length - 1].Valor}}
+    </h1>
+    <table *ngIf='!loading'>
+        <tr>
+            <td>
+                <label for="">Nombre</label>
+            </td>
+            <td>
+                <input type="text" readonly [value]='id | titlecase'>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="">Fecha</label></td>
+            <td> <input type="date" readonly [value]='items[items.length - 1].Fecha'> </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="">Unidad de medida</label>
+            </td>
+            <td>
+                <input type="text" readonly value='Pesos'>
+            </td>
+        </tr>
+    </table>
+    <div style='width: 500px'>
+    
+    <canvas #lineChart ></canvas>
+    </div>
+</div>

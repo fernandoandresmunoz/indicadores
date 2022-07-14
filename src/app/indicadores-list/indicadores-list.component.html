@@ -1,0 +1,15 @@
+<mat-toolbar>
+    <h2 style='margin: 0 auto'>Indicadores</h2>
+</mat-toolbar>
+<mat-nav-list>
+ <mat-list-item *ngFor='let indicador of indicadores'>
+    <a matLine [routerLink]="['/indicador', indicador.key]">
+        {{ indicador.name | titlecase }}
+    </a>
+    <a [routerLink]="['/chart-detail', indicador.key]" mat-stroked-button color='primary' >
+        <mat-icon>info</mat-icon>
+     </a>
+    </mat-list-item>
+</mat-nav-list>
+
+
