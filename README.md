@@ -1,5 +1,7 @@
 # Proyecto Indicadores
 
+Proyecto con Angular para indicadores económicos, UF, Dolar, Euro, IPC, UTM
+
 ## How to Install ?
 
 Run `npm i `
